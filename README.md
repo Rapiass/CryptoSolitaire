@@ -3,32 +3,33 @@
 ## Description
 Ce projet est une application Python permettant de **coder et décoder des messages** à l’aide de la **méthode de chiffrement Solitaire** inventée par Bruce Schneier.  
 
-L’application dispose d’une interface graphique simple et intuitive, et prend en charge plusieurs modes d’entrée :  
+L’application dispose d’une interface graphique en PyQt6, et permet de :
 
-- **Message direct** : saisie du texte à chiffrer ou déchiffrer.  
-- **Fichier texte (.txt)** : lecture et écriture de fichiers pour le chiffrement ou le déchiffrement.  
+- saisir un message directement ou de sélectionner un fichier .txt à chiffrer ;
 
-Le projet permet également de gérer le **paquet de cartes** utilisé pour générer le flux de clés :  
+- déchiffrer un fichier .crypt avec le paquet associé (.paquet) ;
 
-- **Paquet aléatoire** : généré à chaque chiffrement ou sur demande.  
-- **Paquet existant / personnalisé** : pour déchiffrer un message avec le même paquet utilisé pour le chiffrement.  
+- choisir le type de paquet de cartes : classique, aléatoire ou personnalisé.
 
----
 
 ## Fonctionnalités principales
-- Chiffrement et déchiffrement de texte ou de fichiers `.txt`.  
-- Sélection du type de paquet : aléatoire ou existant.  
-- Interface graphique en **Tkinter**.  
-- Gestion des messages longs et de fichiers multiples.  
-- Possibilité de garder le même paquet pour coder et décoder plusieurs messages.  
 
+- Chiffrement et déchiffrement de texte ou fichiers .txt / .crypt.
+
+- Gestion des paquets de cartes : classique, aléatoire ou personnalisé.
+
+- Interface graphique PyQt6 avec boutons intuitifs et zones de texte pour coder/décoder.
+
+- Copie et exportation du paquet pour réutilisation future.
+
+- Gestion des fichiers .txt et .crypt pour sauvegarder les messages.
 ---
 
 ## Technologies utilisées
 - **Python 3**  
-- **Tkinter** pour l’interface graphique  
-- **Classes personnalisées** (`JeuDeCartes`, `Carte`) pour la gestion du paquet et la génération des clés  
-- Gestion des fichiers texte pour lecture et écriture  
+- **PyQt6** pour l’interface graphique  
+- **Classes personnalisées** ; JeuDeCartes, Carte 
+- Gestion des fichiers texte (.txt, .crypt) 
 
 ---
 
@@ -36,9 +37,37 @@ Le projet permet également de gérer le **paquet de cartes** utilisé pour gén
 
 
 SolitaireCipher/
-│── gui.py # Interface graphique principale
-│── solitaire.py # Logique du chiffrement/déchiffrement
-│── cartes.py # Classe JeuDeCartes et Carte
-│── exemples/ # Exemples de fichiers texte
+│── application.py
+
+│── carte.py
+
+│── cryptage.py
+
+│── jeudecartes.py
+
+│── style.qss
+
+│── oui.txt #exemple de message prêt à être encodé
+
 │── README.md # Documentation
-│── requirements.txt # Dépendances
+
+## Installation et utilisation
+### 1 - Cloner le dépôt :
+git clone https://github.com/TonPseudo/SolitaireCipher.git
+cd SolitaireCipher
+
+### 2 - Installer les dépendances :
+pip install PyQt6 pyperclip
+
+### 3 - Lancer l’application :
+python application.py
+
+### Utilisation :
+
+- Choisir un message ou un fichier à chiffrer/déchiffrer.
+
+- Sélectionner le type de paquet : classique, aléatoire ou personnalisé.
+
+- Copier ou sauvegarder le message/chiffrement.
+
+- Pour déchiffrer un fichier .crypt, sélectionner également le fichier .paquet associé.
