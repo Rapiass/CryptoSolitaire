@@ -1,4 +1,4 @@
-# Solitaire Cipher – Chiffrement et déchiffrement
+# Solitaire – Chiffrement et déchiffrement
 
 ## Description
 Ce projet est une application Python permettant de **coder et décoder des messages** à l’aide de la **méthode de chiffrement Solitaire** inventée par Bruce Schneier.  
