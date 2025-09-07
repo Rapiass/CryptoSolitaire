@@ -1,0 +1,124 @@
+/* Style général de la fenêtre */
+QWidget {
+    background-color: #1d1f22; /* Arrière-plan sombre */
+    color: #dcdcdc; /* Texte clair */
+    font-family: 'Segoe UI', sans-serif; /* Police moderne */
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* Champs de saisie (QLineEdit, QTextEdit) */
+QLineEdit, QTextEdit {
+    background-color: #3b3d41; /* Fond légèrement plus clair pour les champs */
+    color: #ffffff; /* Texte en blanc */
+    border: 1px solid #5a5a5a; /* Bordure subtile */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Sélection de texte dans QLineEdit et QTextEdit */
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #0078d7; /* Bordure bleue quand le champ est en focus */
+}
+
+/* Boutons (QPushButton) */
+QPushButton {
+    background-color: #0078d7; /* Bleu moderne */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Coins arrondis plus marqués */
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: #2892ff; /* Bleu plus clair au survol */
+}
+
+QPushButton:pressed {
+    background-color: #005a9e; /* Bleu foncé lorsque pressé */
+}
+
+QPushButton:disabled {
+    background-color: #444; /* Bouton gris désactivé */
+    color: #aaa;
+}
+
+/* Groupes de boutons radio (QRadioButton) */
+QRadioButton {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5a5a5a;
+    border-radius: 10px;
+    background-color: #3b3d41;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #0078d7; /* Bleu pour le bouton sélectionné */
+}
+
+/* Étiquettes (QLabel) */
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #dcdcdc;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Mise en forme du layout et des séparations */
+QFrame {
+    background-color: #444;
+    border: none;
+    height: 2px;
+    margin: 15px 0;
+}
+
+/* Apparence des fenêtres de dialogue (QMessageBox) */
+QMessageBox {
+    background-color: #2b2b2b;
+    color: #dcdcdc;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+QMessageBox QPushButton {
+    background-color: #0078d7;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #2892ff;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #005a9e;
+}
+
+/* Les éléments de type layout */
+QVBoxLayout, QHBoxLayout {
+    spacing: 15px;
+}
+
+/* Texte d'indication dans les champs de saisie */
+QLineEdit::placeholder, QTextEdit::placeholder {
+    color: #888;
+}
+
+/* Apparence des champs de texte */
+QTextEdit {
+    border: 1px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 10px;
+}
